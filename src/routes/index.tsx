@@ -1,3 +1,4 @@
+import ContactForm from "@/components/ContactForm";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -17,6 +18,7 @@ export default function Index() {
         <MapSection />
         <Places />
         <Quest />
+        <ContactForm />
       </main>
       <Footer />
     </div>
@@ -52,6 +54,7 @@ function Nav() {
           <button type="button" onClick={scrollToId("map")} className="hover:text-ink transition-colors">Карта</button>
           <button type="button" onClick={scrollToId("places")} className="hover:text-ink transition-colors">Локации</button>
           <Link to="/quest" className="hover:text-ink transition-colors">Квест</Link>
+          <button type="button" onClick={scrollToId("contact")} className="hover:text-ink transition-colors">Обратная связь</button>
         </nav>
         <div className="flex items-center gap-2">
           <Link
@@ -80,6 +83,7 @@ function Nav() {
             <button type="button" onClick={scrollToId("about", close)} className="text-left py-3 border-b border-ink/5">О парке</button>
             <button type="button" onClick={scrollToId("map", close)} className="text-left py-3 border-b border-ink/5">Карта</button>
             <button type="button" onClick={scrollToId("places", close)} className="text-left py-3 border-b border-ink/5">Локации</button>
+            <button type="button" onClick={scrollToId("contact", close)} className="text-left py-3 border-b border-ink/5">Обратная связь</button>
             <Link to="/quest" onClick={close} className="py-3 border-b border-ink/5">Квест</Link>
             <Link
               to="/quest"
@@ -465,6 +469,7 @@ function Footer() {
               <li><button type="button" onClick={scrollToId("about")} className="hover:text-[var(--violet-soft)]">О парке</button></li>
               <li><button type="button" onClick={scrollToId("map")} className="hover:text-[var(--violet-soft)]">Карта</button></li>
               <li><button type="button" onClick={scrollToId("places")} className="hover:text-[var(--violet-soft)]">Локации</button></li>
+              <li><button type="button" onClick={scrollToId("contact")} className="hover:text-[var(--violet-soft)]">Обратная связь</button></li>
               <li><Link to="/quest" className="hover:text-[var(--violet-soft)]">Квест</Link></li>
             </ul>
 
